@@ -1,0 +1,10 @@
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\bin\Debug\Conjuracao.exe.config
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\bin\Debug\Conjuracao.exe
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\bin\Debug\Conjuracao.pdb
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.csprojAssemblyReference.cache
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.Properties.Resources.resources
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.csproj.GenerateResource.cache
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.exe
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.pdb
+C:\Users\Pichau\Documents\0. COSMOS\0. Estudos\1. Game Dev\.IESB\Trabalhos\Lógica de Programação\Conjuracao\obj\Debug\Conjuracao.Conjuracao.resources
