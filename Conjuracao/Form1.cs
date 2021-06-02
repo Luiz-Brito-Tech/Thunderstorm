@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Conjuracao
 {
-    public partial class Conjuracao : Form
+    public partial class Thunderstorm : Form
     {
 
         Random rand = new Random();
@@ -20,7 +15,7 @@ namespace Conjuracao
 
         bool JogoRolando = false; // False - O jogo/partida não está em andamento / True - O jogo/partida está em andamento
 
-        public Conjuracao() // Construtor
+        public Thunderstorm() // Construtor
         {
             InitializeComponent();
             // Inicialização do array
@@ -34,50 +29,53 @@ namespace Conjuracao
 
         // Inputs
 
-        private void comecaButton_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
-            CriaLista(dados);
-            comecarButton.Enabled = false;
-            rolarButton.Enabled = true;
-            JogoRolando = true;
-
-        }
-
-        private void rolarButton_Click(object sender, EventArgs e)
-        {
-            foreach (Dado dado in dadosLista)
+            switch (Button.Text)
             {
-                dado.valor = rand.Next(1, 7);
-                dado.MudaImagem(dado.valor);
-            }
-            dadosLista.RemoveAll(dado => dado.valor == 1);
-            if (dadosLista.ToArray().Length == 0) 
-            {
-                rolarButton.Enabled = false;
-                if (JogoRolando is true) 
-                {
-                    reporButton.Enabled = true;
-                }
+                case "COMEÇAR":
+                    CriaLista(dados);
+                    Button.Text = "ROLAR";
+                    JogoRolando = true;
+                    break;
+
+                case "ROLAR":
+
+                    foreach (Dado dado in dadosLista)
+                    {
+                        dado.valor = rand.Next(1, 7);
+                        dado.MudaImagem(dado.valor);
+                    }
+                    dadosLista.RemoveAll(dado => dado.valor == 1);
+                    if (dadosLista.ToArray().Length == 0)
+                    {
+                        if (JogoRolando is true)
+                        {
+                            Button.Text = "REPOR";
+                        }
+                        else
+                        {
+                            Button.Enabled = false;
+                        }
+                    }
+                    break;
+
+                case "REPOR":
+                    CriaLista(dados);
+                    Button.Text = "ROLAR";
+                    break;
             }
         }
 
-        private void reporButton_Click(object sender, EventArgs e)
-        {
-            CriaLista(dados);
-            rolarButton.Enabled = true;
-            reporButton.Enabled = false;
-        }
-
-        //Outras funções/métodos
+        // Outras funções/métodos
 
         private void CriaLista (Dado[] array)
         {
             foreach (Dado dado in array)
             {
-                dado.ladoDado.Image = Image.FromFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "/Pics/dado6.png");
+                dado.ladoDado.Image = Image.FromFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "/Pics/lado6.png");
                 dadosLista.Add(dado);
             }
         }
     }
-
 }
