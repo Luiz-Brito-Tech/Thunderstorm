@@ -37,6 +37,10 @@ namespace Conjuracao
             this.dado4picbox = new System.Windows.Forms.PictureBox();
             this.dado5picbox = new System.Windows.Forms.PictureBox();
             this.dado6picbox = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.dado1picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado2picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado3picbox)).BeginInit();
@@ -49,7 +53,7 @@ namespace Conjuracao
             // 
             this.dado1picbox.Image = ((System.Drawing.Image)(resources.GetObject("dado1picbox.Image")));
             this.dado1picbox.InitialImage = null;
-            this.dado1picbox.Location = new System.Drawing.Point(55, 58);
+            this.dado1picbox.Location = new System.Drawing.Point(116, 53);
             this.dado1picbox.Name = "dado1picbox";
             this.dado1picbox.Size = new System.Drawing.Size(75, 75);
             this.dado1picbox.TabIndex = 0;
@@ -57,7 +61,7 @@ namespace Conjuracao
             // 
             // Button
             // 
-            this.Button.Location = new System.Drawing.Point(100, 231);
+            this.Button.Location = new System.Drawing.Point(161, 226);
             this.Button.Name = "Button";
             this.Button.Size = new System.Drawing.Size(146, 31);
             this.Button.TabIndex = 1;
@@ -69,7 +73,7 @@ namespace Conjuracao
             // 
             this.dado2picbox.Image = ((System.Drawing.Image)(resources.GetObject("dado2picbox.Image")));
             this.dado2picbox.InitialImage = null;
-            this.dado2picbox.Location = new System.Drawing.Point(136, 58);
+            this.dado2picbox.Location = new System.Drawing.Point(197, 53);
             this.dado2picbox.Name = "dado2picbox";
             this.dado2picbox.Size = new System.Drawing.Size(75, 75);
             this.dado2picbox.TabIndex = 2;
@@ -79,7 +83,7 @@ namespace Conjuracao
             // 
             this.dado3picbox.Image = ((System.Drawing.Image)(resources.GetObject("dado3picbox.Image")));
             this.dado3picbox.InitialImage = null;
-            this.dado3picbox.Location = new System.Drawing.Point(217, 58);
+            this.dado3picbox.Location = new System.Drawing.Point(278, 53);
             this.dado3picbox.Name = "dado3picbox";
             this.dado3picbox.Size = new System.Drawing.Size(75, 75);
             this.dado3picbox.TabIndex = 3;
@@ -89,7 +93,7 @@ namespace Conjuracao
             // 
             this.dado4picbox.Image = ((System.Drawing.Image)(resources.GetObject("dado4picbox.Image")));
             this.dado4picbox.InitialImage = null;
-            this.dado4picbox.Location = new System.Drawing.Point(55, 139);
+            this.dado4picbox.Location = new System.Drawing.Point(116, 134);
             this.dado4picbox.Name = "dado4picbox";
             this.dado4picbox.Size = new System.Drawing.Size(75, 75);
             this.dado4picbox.TabIndex = 4;
@@ -99,7 +103,7 @@ namespace Conjuracao
             // 
             this.dado5picbox.Image = ((System.Drawing.Image)(resources.GetObject("dado5picbox.Image")));
             this.dado5picbox.InitialImage = null;
-            this.dado5picbox.Location = new System.Drawing.Point(136, 139);
+            this.dado5picbox.Location = new System.Drawing.Point(197, 134);
             this.dado5picbox.Name = "dado5picbox";
             this.dado5picbox.Size = new System.Drawing.Size(75, 75);
             this.dado5picbox.TabIndex = 5;
@@ -109,11 +113,43 @@ namespace Conjuracao
             // 
             this.dado6picbox.Image = ((System.Drawing.Image)(resources.GetObject("dado6picbox.Image")));
             this.dado6picbox.InitialImage = null;
-            this.dado6picbox.Location = new System.Drawing.Point(217, 139);
+            this.dado6picbox.Location = new System.Drawing.Point(278, 134);
             this.dado6picbox.Name = "dado6picbox";
             this.dado6picbox.Size = new System.Drawing.Size(75, 75);
             this.dado6picbox.TabIndex = 6;
             this.dado6picbox.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(402, 76);
+            this.progressBar1.Maximum = 6;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 7;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(402, 105);
+            this.progressBar2.Maximum = 6;
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(100, 23);
+            this.progressBar2.TabIndex = 8;
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(402, 134);
+            this.progressBar3.Maximum = 6;
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(100, 23);
+            this.progressBar3.TabIndex = 9;
+            // 
+            // progressBar4
+            // 
+            this.progressBar4.Location = new System.Drawing.Point(402, 163);
+            this.progressBar4.Maximum = 6;
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(100, 23);
+            this.progressBar4.TabIndex = 10;
             // 
             // Thunderstorm
             // 
@@ -121,6 +157,10 @@ namespace Conjuracao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(624, 321);
+            this.Controls.Add(this.progressBar4);
+            this.Controls.Add(this.progressBar3);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dado6picbox);
             this.Controls.Add(this.dado5picbox);
             this.Controls.Add(this.dado4picbox);
@@ -149,6 +189,10 @@ namespace Conjuracao
         public System.Windows.Forms.PictureBox dado4picbox;
         public System.Windows.Forms.PictureBox dado5picbox;
         public System.Windows.Forms.PictureBox dado6picbox;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.ProgressBar progressBar4;
     }
 }
 
