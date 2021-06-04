@@ -42,6 +42,7 @@ namespace Conjuracao
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.groupBoxPartida = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.progressBar7 = new System.Windows.Forms.ProgressBar();
@@ -50,7 +51,14 @@ namespace Conjuracao
             this.textBoxEntraJogador = new System.Windows.Forms.TextBox();
             this.buttonJogar = new System.Windows.Forms.Button();
             this.buttonAdicionar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dado1picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado2picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado3picbox)).BeginInit();
@@ -149,10 +157,10 @@ namespace Conjuracao
             this.progressBar1.AccessibleName = "Jogo";
             this.progressBar1.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar1.Enabled = false;
-            this.progressBar1.Location = new System.Drawing.Point(334, 63);
+            this.progressBar1.Location = new System.Drawing.Point(334, 49);
             this.progressBar1.Maximum = 6;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Size = new System.Drawing.Size(100, 37);
             this.progressBar1.TabIndex = 7;
             this.progressBar1.Visible = false;
             // 
@@ -161,10 +169,10 @@ namespace Conjuracao
             this.progressBar2.AccessibleName = "Jogo";
             this.progressBar2.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar2.Enabled = false;
-            this.progressBar2.Location = new System.Drawing.Point(334, 101);
+            this.progressBar2.Location = new System.Drawing.Point(334, 92);
             this.progressBar2.Maximum = 6;
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(100, 23);
+            this.progressBar2.Size = new System.Drawing.Size(100, 32);
             this.progressBar2.TabIndex = 8;
             this.progressBar2.Visible = false;
             // 
@@ -173,10 +181,10 @@ namespace Conjuracao
             this.progressBar3.AccessibleName = "Jogo";
             this.progressBar3.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar3.Enabled = false;
-            this.progressBar3.Location = new System.Drawing.Point(334, 141);
+            this.progressBar3.Location = new System.Drawing.Point(334, 130);
             this.progressBar3.Maximum = 6;
             this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(100, 23);
+            this.progressBar3.Size = new System.Drawing.Size(100, 34);
             this.progressBar3.TabIndex = 9;
             this.progressBar3.Visible = false;
             // 
@@ -185,15 +193,23 @@ namespace Conjuracao
             this.progressBar4.AccessibleName = "Jogo";
             this.progressBar4.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar4.Enabled = false;
-            this.progressBar4.Location = new System.Drawing.Point(334, 182);
+            this.progressBar4.Location = new System.Drawing.Point(334, 170);
             this.progressBar4.Maximum = 6;
             this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(100, 23);
+            this.progressBar4.Size = new System.Drawing.Size(100, 35);
             this.progressBar4.TabIndex = 10;
             this.progressBar4.Visible = false;
             // 
             // groupBoxPartida
             // 
+            this.groupBoxPartida.Controls.Add(this.button9);
+            this.groupBoxPartida.Controls.Add(this.button8);
+            this.groupBoxPartida.Controls.Add(this.button7);
+            this.groupBoxPartida.Controls.Add(this.button6);
+            this.groupBoxPartida.Controls.Add(this.button5);
+            this.groupBoxPartida.Controls.Add(this.button4);
+            this.groupBoxPartida.Controls.Add(this.button3);
+            this.groupBoxPartida.Controls.Add(this.button2);
             this.groupBoxPartida.Controls.Add(this.button1);
             this.groupBoxPartida.Controls.Add(this.progressBar5);
             this.groupBoxPartida.Controls.Add(this.progressBar6);
@@ -213,21 +229,31 @@ namespace Conjuracao
             this.groupBoxPartida.Enabled = false;
             this.groupBoxPartida.Location = new System.Drawing.Point(12, 12);
             this.groupBoxPartida.Name = "groupBoxPartida";
-            this.groupBoxPartida.Size = new System.Drawing.Size(600, 297);
+            this.groupBoxPartida.Size = new System.Drawing.Size(758, 297);
             this.groupBoxPartida.TabIndex = 11;
             this.groupBoxPartida.TabStop = false;
             this.groupBoxPartida.Text = "Partida";
             this.groupBoxPartida.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(677, 268);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Reiniciar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button_Reiniciar);
             // 
             // progressBar5
             // 
             this.progressBar5.AccessibleName = "Jogo";
             this.progressBar5.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar5.Enabled = false;
-            this.progressBar5.Location = new System.Drawing.Point(473, 63);
+            this.progressBar5.Location = new System.Drawing.Point(520, 49);
             this.progressBar5.Maximum = 6;
             this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(100, 23);
+            this.progressBar5.Size = new System.Drawing.Size(100, 37);
             this.progressBar5.TabIndex = 14;
             this.progressBar5.Visible = false;
             // 
@@ -236,10 +262,10 @@ namespace Conjuracao
             this.progressBar6.AccessibleName = "Jogo";
             this.progressBar6.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar6.Enabled = false;
-            this.progressBar6.Location = new System.Drawing.Point(473, 101);
+            this.progressBar6.Location = new System.Drawing.Point(520, 92);
             this.progressBar6.Maximum = 6;
             this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(100, 23);
+            this.progressBar6.Size = new System.Drawing.Size(100, 32);
             this.progressBar6.TabIndex = 13;
             this.progressBar6.Visible = false;
             // 
@@ -248,10 +274,10 @@ namespace Conjuracao
             this.progressBar7.AccessibleName = "Jogo";
             this.progressBar7.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar7.Enabled = false;
-            this.progressBar7.Location = new System.Drawing.Point(473, 141);
+            this.progressBar7.Location = new System.Drawing.Point(520, 130);
             this.progressBar7.Maximum = 6;
             this.progressBar7.Name = "progressBar7";
-            this.progressBar7.Size = new System.Drawing.Size(100, 23);
+            this.progressBar7.Size = new System.Drawing.Size(100, 34);
             this.progressBar7.TabIndex = 12;
             this.progressBar7.Visible = false;
             // 
@@ -260,10 +286,10 @@ namespace Conjuracao
             this.progressBar8.AccessibleName = "Jogo";
             this.progressBar8.BackColor = System.Drawing.SystemColors.Desktop;
             this.progressBar8.Enabled = false;
-            this.progressBar8.Location = new System.Drawing.Point(473, 182);
+            this.progressBar8.Location = new System.Drawing.Point(520, 170);
             this.progressBar8.Maximum = 6;
             this.progressBar8.Name = "progressBar8";
-            this.progressBar8.Size = new System.Drawing.Size(100, 23);
+            this.progressBar8.Size = new System.Drawing.Size(100, 35);
             this.progressBar8.TabIndex = 11;
             this.progressBar8.Visible = false;
             // 
@@ -309,15 +335,93 @@ namespace Conjuracao
             this.buttonAdicionar.UseVisualStyleBackColor = true;
             this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(519, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Reiniciar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button_Reiniciar);
+            this.button2.Enabled = false;
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(293, 49);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 37);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "1°";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(293, 92);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 32);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "2°";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Enabled = false;
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(293, 130);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(35, 34);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "3°";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Enabled = false;
+            this.button5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(293, 170);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(35, 35);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "4°";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Enabled = false;
+            this.button6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(479, 49);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(35, 37);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "5°";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Enabled = false;
+            this.button7.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(479, 92);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(35, 32);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "6°";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Enabled = false;
+            this.button8.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(479, 130);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(35, 34);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "7°";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Enabled = false;
+            this.button9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(479, 170);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(35, 35);
+            this.button9.TabIndex = 22;
+            this.button9.Text = "8°";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // Thunderstorm
             // 
@@ -365,6 +469,14 @@ namespace Conjuracao
         private System.Windows.Forms.ProgressBar progressBar7;
         private System.Windows.Forms.ProgressBar progressBar8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 
