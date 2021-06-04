@@ -18,3 +18,13 @@ C:\Users\Pichau\source\repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.csproj
 C:\Users\Pichau\source\repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.exe
 C:\Users\Pichau\source\repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.pdb
 C:\Users\Pichau\source\repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.Thunderstorm.resources
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\bin\Debug\Conjuracao.exe.config
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\bin\Debug\Conjuracao.exe
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\bin\Debug\Conjuracao.pdb
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.csprojAssemblyReference.cache
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.Thunderstorm.resources
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.Properties.Resources.resources
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.csproj.GenerateResource.cache
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.exe
+C:\Users\user\Source\Repos\Thunderstorm\Conjuracao\obj\Debug\Conjuracao.pdb

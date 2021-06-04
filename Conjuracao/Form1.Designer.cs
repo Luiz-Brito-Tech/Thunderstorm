@@ -42,14 +42,15 @@ namespace Conjuracao
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.groupBoxPartida = new System.Windows.Forms.GroupBox();
-            this.groupBoxMenu = new System.Windows.Forms.GroupBox();
-            this.textBoxEntraJogador = new System.Windows.Forms.TextBox();
-            this.buttonJogar = new System.Windows.Forms.Button();
-            this.buttonAdicionar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.progressBar7 = new System.Windows.Forms.ProgressBar();
             this.progressBar8 = new System.Windows.Forms.ProgressBar();
+            this.groupBoxMenu = new System.Windows.Forms.GroupBox();
+            this.textBoxEntraJogador = new System.Windows.Forms.TextBox();
+            this.buttonJogar = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dado1picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado2picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado3picbox)).BeginInit();
@@ -75,9 +76,9 @@ namespace Conjuracao
             // buttonDados
             // 
             this.buttonDados.AccessibleName = "Jogo";
-            this.buttonDados.Location = new System.Drawing.Point(83, 222);
+            this.buttonDados.Location = new System.Drawing.Point(95, 221);
             this.buttonDados.Name = "buttonDados";
-            this.buttonDados.Size = new System.Drawing.Size(146, 31);
+            this.buttonDados.Size = new System.Drawing.Size(121, 31);
             this.buttonDados.TabIndex = 1;
             this.buttonDados.Text = "COMEÇAR";
             this.buttonDados.UseVisualStyleBackColor = true;
@@ -193,6 +194,7 @@ namespace Conjuracao
             // 
             // groupBoxPartida
             // 
+            this.groupBoxPartida.Controls.Add(this.button1);
             this.groupBoxPartida.Controls.Add(this.progressBar5);
             this.groupBoxPartida.Controls.Add(this.progressBar6);
             this.groupBoxPartida.Controls.Add(this.progressBar7);
@@ -217,47 +219,15 @@ namespace Conjuracao
             this.groupBoxPartida.Text = "Partida";
             this.groupBoxPartida.Visible = false;
             // 
-            // groupBoxMenu
+            // button1
             // 
-            this.groupBoxMenu.Controls.Add(this.textBoxEntraJogador);
-            this.groupBoxMenu.Controls.Add(this.buttonJogar);
-            this.groupBoxMenu.Controls.Add(this.buttonAdicionar);
-            this.groupBoxMenu.Location = new System.Drawing.Point(12, 315);
-            this.groupBoxMenu.Name = "groupBoxMenu";
-            this.groupBoxMenu.Size = new System.Drawing.Size(600, 297);
-            this.groupBoxMenu.TabIndex = 11;
-            this.groupBoxMenu.TabStop = false;
-            this.groupBoxMenu.Text = "Menu";
-            // 
-            // textBoxEntraJogador
-            // 
-            this.textBoxEntraJogador.Location = new System.Drawing.Point(189, 185);
-            this.textBoxEntraJogador.Name = "textBoxEntraJogador";
-            this.textBoxEntraJogador.Size = new System.Drawing.Size(222, 20);
-            this.textBoxEntraJogador.TabIndex = 3;
-            this.textBoxEntraJogador.TextChanged += new System.EventHandler(this.textBoxEntraJogador_TextChanged);
-            // 
-            // buttonJogar
-            // 
-            this.buttonJogar.Enabled = false;
-            this.buttonJogar.Location = new System.Drawing.Point(303, 211);
-            this.buttonJogar.Name = "buttonJogar";
-            this.buttonJogar.Size = new System.Drawing.Size(108, 23);
-            this.buttonJogar.TabIndex = 1;
-            this.buttonJogar.Text = "JOGAR";
-            this.buttonJogar.UseVisualStyleBackColor = true;
-            this.buttonJogar.Click += new System.EventHandler(this.buttonJogar_Click);
-            // 
-            // buttonAdicionar
-            // 
-            this.buttonAdicionar.Enabled = false;
-            this.buttonAdicionar.Location = new System.Drawing.Point(189, 211);
-            this.buttonAdicionar.Name = "buttonAdicionar";
-            this.buttonAdicionar.Size = new System.Drawing.Size(108, 23);
-            this.buttonAdicionar.TabIndex = 0;
-            this.buttonAdicionar.Text = "Adicionar";
-            this.buttonAdicionar.UseVisualStyleBackColor = true;
-            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
+            this.button1.Location = new System.Drawing.Point(519, 268);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Reiniciar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button_Reiniciar);
             // 
             // progressBar5
             // 
@@ -307,6 +277,48 @@ namespace Conjuracao
             this.progressBar8.TabIndex = 11;
             this.progressBar8.Visible = false;
             // 
+            // groupBoxMenu
+            // 
+            this.groupBoxMenu.Controls.Add(this.buttonJogar);
+            this.groupBoxMenu.Controls.Add(this.buttonAdicionar);
+            this.groupBoxMenu.Controls.Add(this.textBoxEntraJogador);
+            this.groupBoxMenu.Location = new System.Drawing.Point(12, 315);
+            this.groupBoxMenu.Name = "groupBoxMenu";
+            this.groupBoxMenu.Size = new System.Drawing.Size(600, 297);
+            this.groupBoxMenu.TabIndex = 11;
+            this.groupBoxMenu.TabStop = false;
+            this.groupBoxMenu.Text = "Menu";
+            // 
+            // textBoxEntraJogador
+            // 
+            this.textBoxEntraJogador.Location = new System.Drawing.Point(189, 185);
+            this.textBoxEntraJogador.Name = "textBoxEntraJogador";
+            this.textBoxEntraJogador.Size = new System.Drawing.Size(222, 20);
+            this.textBoxEntraJogador.TabIndex = 3;
+            this.textBoxEntraJogador.TextChanged += new System.EventHandler(this.textBoxEntraJogador_TextChanged);
+            // 
+            // buttonJogar
+            // 
+            this.buttonJogar.Enabled = false;
+            this.buttonJogar.Location = new System.Drawing.Point(303, 211);
+            this.buttonJogar.Name = "buttonJogar";
+            this.buttonJogar.Size = new System.Drawing.Size(108, 23);
+            this.buttonJogar.TabIndex = 1;
+            this.buttonJogar.Text = "JOGAR";
+            this.buttonJogar.UseVisualStyleBackColor = true;
+            this.buttonJogar.Click += new System.EventHandler(this.buttonJogar_Click);
+            // 
+            // buttonAdicionar
+            // 
+            this.buttonAdicionar.Enabled = false;
+            this.buttonAdicionar.Location = new System.Drawing.Point(189, 211);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(108, 23);
+            this.buttonAdicionar.TabIndex = 0;
+            this.buttonAdicionar.Text = "Adicionar";
+            this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
+            // 
             // Thunderstorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +364,7 @@ namespace Conjuracao
         private System.Windows.Forms.ProgressBar progressBar6;
         private System.Windows.Forms.ProgressBar progressBar7;
         private System.Windows.Forms.ProgressBar progressBar8;
+        private System.Windows.Forms.Button button1;
     }
 }
 
