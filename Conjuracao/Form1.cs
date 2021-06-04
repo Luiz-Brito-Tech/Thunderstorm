@@ -131,6 +131,18 @@ namespace Conjuracao
             buttonAdicionar.Enabled = true;
         }
 
+        private void button_Reiniciar(object sender, EventArgs e)
+        {
+            for (int posicao = 0; posicao < barrasAtivadas; posicao++)
+            {
+                barras[posicao].Value = 0;
+            }
+
+            Cria_dadosLista(dados);
+            buttonDados.Enabled = true;
+            buttonDados.Text = "COMEÇAR";
+        }
+
         // Outras funções/métodos
 
         private void Cria_dadosLista (Dado[] array)
@@ -144,7 +156,7 @@ namespace Conjuracao
 
         private void CriaJogadores()
         {
-            
+
         }
     }
 }
