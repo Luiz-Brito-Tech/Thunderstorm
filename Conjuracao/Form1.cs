@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Conjuracao
@@ -13,10 +14,11 @@ namespace Conjuracao
         List<Dado> dadosLista = new List<Dado>();
         Dado[] dados = new Dado[6];
         ProgressBar[] barras = new ProgressBar[8];
+        Button[] numerosDosJogadores = new Button[8];
         int posicao = 0;
         int barrasAtivadas = 0;
+        int numerosExibidos = 0;
 
-        bool JogoRolando = false; // False - O jogo/partida não está em andamento / True - O jogo/partida está em andamento
         bool TirouAoMenosUm1 = false;
 
         public Thunderstorm() // Construtor
@@ -37,6 +39,14 @@ namespace Conjuracao
             barras[5] = progressBar6;
             barras[6] = progressBar7;
             barras[7] = progressBar8;
+            numerosDosJogadores[0] = numeroDoJogador1;
+            numerosDosJogadores[1] = numeroDoJogador2;
+            numerosDosJogadores[2] = numeroDoJogador3;
+            numerosDosJogadores[3] = numeroDoJogador4;
+            numerosDosJogadores[4] = numeroDoJogador5;
+            numerosDosJogadores[5] = numeroDoJogador6;
+            numerosDosJogadores[6] = numeroDoJogador7;
+            numerosDosJogadores[7] = numeroDoJogador8;
         }
 
         // Inputs
@@ -48,7 +58,6 @@ namespace Conjuracao
                 case "COMEÇAR":
                     Cria_dadosLista(dados);
                     buttonDados.Text = "ROLAR";
-                    JogoRolando = true;
                     break;
 
                 case "ROLAR":
@@ -62,28 +71,20 @@ namespace Conjuracao
                             TirouAoMenosUm1 = true;
                         }
                     }
-                    dadosLista.RemoveAll(dado => dado.valor == 1);
 
-                    if (TirouAoMenosUm1 == true && barras[posicao].Value < 6)
+                    if (TirouAoMenosUm1 == true)
                     {
-                        barras[posicao].Value++;
                         TirouAoMenosUm1 = false;
-                    }
-
-                    if (dadosLista.ToArray().Length == 0)
-                    {
-                        if (JogoRolando is true)
+                        if (barras[posicao].Value < 6)
                         {
-                            buttonDados.Text = "REPOR";
-                        }
-                        else
-                        {
-                            buttonDados.Enabled = false;
+                            barras[posicao].Value++;
+                            buttonDados.Text = "REMOVER DADOS QUE TIRARAM 1";
                         }
                     }
 
                     if(barras[posicao].Value == 6)
                     {
+                        TirouAoMenosUm1 = false;
                         buttonDados.Enabled = false;
                     }
 
@@ -92,6 +93,29 @@ namespace Conjuracao
                     if(posicao == barrasAtivadas)
                     {
                         posicao = 0;
+                    }
+
+                    break;
+
+                case "REMOVER DADOS QUE TIRARAM 1":
+
+                    foreach (Dado dado in dadosLista)
+                    {
+                        if (dado.valor == 1)
+                        {
+                            dado.ladoDado.Image = null;
+                        }
+                    }
+
+                    dadosLista.RemoveAll(dado => dado.valor == 1);
+
+                    if (dadosLista.ToArray().Length == 0)
+                    {
+                        buttonDados.Text = "REPOR";
+                    }
+                    else 
+                    {
+                        buttonDados.Text = "ROLAR";
                     }
 
                     break;
@@ -113,8 +137,9 @@ namespace Conjuracao
 
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
-            barras[barrasAtivadas].Enabled = true;
             barras[barrasAtivadas].Show();
+            numerosDosJogadores[numerosExibidos].Show();
+            numerosExibidos++;
             barrasAtivadas++;
             if(barrasAtivadas == 4)
             {
@@ -133,9 +158,11 @@ namespace Conjuracao
 
         private void button_Reiniciar(object sender, EventArgs e)
         {
-            for (int posicao = 0; posicao < barrasAtivadas; posicao++)
+            posicao = 0;
+
+            for (int indice = 0; indice < barrasAtivadas; indice++)
             {
-                barras[posicao].Value = 0;
+                barras[indice].Value = 0;
             }
 
             Cria_dadosLista(dados);
@@ -150,8 +177,10 @@ namespace Conjuracao
             foreach (Dado dado in array)
             {
                 dado.ladoDado.Image = Image.FromFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "/Pics/lado6.png");
-                dadosLista.Add(dado);
             }
+
+            dadosLista = dados.ToList();
+
         }
 
         private void CriaJogadores()
