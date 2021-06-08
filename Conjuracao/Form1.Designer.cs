@@ -223,6 +223,7 @@ namespace Conjuracao
             // 
             // groupBoxPartida
             // 
+            this.groupBoxPartida.Controls.Add(this.groupBoxMenu);
             this.groupBoxPartida.Controls.Add(this.espacoSeta3);
             this.groupBoxPartida.Controls.Add(this.espacoSeta4);
             this.groupBoxPartida.Controls.Add(this.espacoSeta2);
@@ -491,7 +492,7 @@ namespace Conjuracao
             this.groupBoxMenu.Controls.Add(this.textBox1);
             this.groupBoxMenu.Controls.Add(this.buttonJogar);
             this.groupBoxMenu.Controls.Add(this.buttonAdicionar);
-            this.groupBoxMenu.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxMenu.Location = new System.Drawing.Point(0, 0);
             this.groupBoxMenu.Name = "groupBoxMenu";
             this.groupBoxMenu.Size = new System.Drawing.Size(758, 297);
             this.groupBoxMenu.TabIndex = 11;
@@ -546,11 +547,11 @@ namespace Conjuracao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(784, 331);
-            this.Controls.Add(this.groupBoxMenu);
             this.Controls.Add(this.groupBoxPartida);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaximumSize = new System.Drawing.Size(800, 370);
             this.Name = "Thunderstorm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thunderstorm";
             ((System.ComponentModel.ISupportInitialize)(this.dado1picbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado2picbox)).EndInit();
