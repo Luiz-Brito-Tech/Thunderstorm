@@ -68,6 +68,7 @@ namespace Conjuracao
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonJogar = new System.Windows.Forms.Button();
             this.buttonAdicionar = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dado1picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado2picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado3picbox)).BeginInit();
@@ -223,7 +224,11 @@ namespace Conjuracao
             // 
             // groupBoxPartida
             // 
+<<<<<<< HEAD
             this.groupBoxPartida.Controls.Add(this.groupBoxMenu);
+=======
+            this.groupBoxPartida.Controls.Add(this.buttonMenu);
+>>>>>>> 3a7de0341ab6b534642c4d5277862081cb26a28f
             this.groupBoxPartida.Controls.Add(this.espacoSeta3);
             this.groupBoxPartida.Controls.Add(this.espacoSeta4);
             this.groupBoxPartida.Controls.Add(this.espacoSeta2);
@@ -513,10 +518,10 @@ namespace Conjuracao
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Sigmar One", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(58, 75);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(103, 105);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(662, 105);
+            this.textBox1.Size = new System.Drawing.Size(553, 73);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "THUNDERSTORM";
             // 
@@ -541,6 +546,16 @@ namespace Conjuracao
             this.buttonAdicionar.UseVisualStyleBackColor = true;
             this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Location = new System.Drawing.Point(596, 268);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(75, 23);
+            this.buttonMenu.TabIndex = 31;
+            this.buttonMenu.Text = "Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // Thunderstorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,7 +564,7 @@ namespace Conjuracao
             this.ClientSize = new System.Drawing.Size(784, 331);
             this.Controls.Add(this.groupBoxPartida);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MaximumSize = new System.Drawing.Size(800, 370);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Thunderstorm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thunderstorm";
@@ -613,6 +628,7 @@ namespace Conjuracao
         private System.Windows.Forms.PictureBox espacoSeta5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelUnica;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }
 

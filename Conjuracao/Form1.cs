@@ -63,6 +63,11 @@ namespace Conjuracao
         }
 
         // Inputs
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+            Environment.Exit(0);
+        }
 
         private void buttonDados_Click(object sender, EventArgs e)
         {
@@ -247,5 +252,7 @@ namespace Conjuracao
             dadosLista = dados.ToList();
 
         }
+
+        
     }
 }
