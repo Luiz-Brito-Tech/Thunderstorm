@@ -42,6 +42,12 @@ namespace Conjuracao
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.groupBoxPartida = new System.Windows.Forms.GroupBox();
+            this.groupBoxMenu = new System.Windows.Forms.GroupBox();
+            this.labelUnica = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonJogar = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
             this.espacoSeta3 = new System.Windows.Forms.PictureBox();
             this.espacoSeta4 = new System.Windows.Forms.PictureBox();
             this.espacoSeta2 = new System.Windows.Forms.PictureBox();
@@ -63,12 +69,6 @@ namespace Conjuracao
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.progressBar7 = new System.Windows.Forms.ProgressBar();
             this.progressBar8 = new System.Windows.Forms.ProgressBar();
-            this.groupBoxMenu = new System.Windows.Forms.GroupBox();
-            this.labelUnica = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonJogar = new System.Windows.Forms.Button();
-            this.buttonAdicionar = new System.Windows.Forms.Button();
-            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dado1picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado2picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado3picbox)).BeginInit();
@@ -76,6 +76,7 @@ namespace Conjuracao
             ((System.ComponentModel.ISupportInitialize)(this.dado5picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado6picbox)).BeginInit();
             this.groupBoxPartida.SuspendLayout();
+            this.groupBoxMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta2)).BeginInit();
@@ -84,7 +85,6 @@ namespace Conjuracao
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta5)).BeginInit();
-            this.groupBoxMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // dado1picbox
@@ -224,11 +224,7 @@ namespace Conjuracao
             // 
             // groupBoxPartida
             // 
-<<<<<<< HEAD
-            this.groupBoxPartida.Controls.Add(this.groupBoxMenu);
-=======
             this.groupBoxPartida.Controls.Add(this.buttonMenu);
->>>>>>> 3a7de0341ab6b534642c4d5277862081cb26a28f
             this.groupBoxPartida.Controls.Add(this.espacoSeta3);
             this.groupBoxPartida.Controls.Add(this.espacoSeta4);
             this.groupBoxPartida.Controls.Add(this.espacoSeta2);
@@ -268,6 +264,71 @@ namespace Conjuracao
             this.groupBoxPartida.TabIndex = 11;
             this.groupBoxPartida.TabStop = false;
             this.groupBoxPartida.Visible = false;
+            // 
+            // groupBoxMenu
+            // 
+            this.groupBoxMenu.Controls.Add(this.labelUnica);
+            this.groupBoxMenu.Controls.Add(this.textBox1);
+            this.groupBoxMenu.Controls.Add(this.buttonJogar);
+            this.groupBoxMenu.Controls.Add(this.buttonAdicionar);
+            this.groupBoxMenu.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxMenu.Name = "groupBoxMenu";
+            this.groupBoxMenu.Size = new System.Drawing.Size(758, 297);
+            this.groupBoxMenu.TabIndex = 11;
+            this.groupBoxMenu.TabStop = false;
+            // 
+            // labelUnica
+            // 
+            this.labelUnica.AutoSize = true;
+            this.labelUnica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUnica.ForeColor = System.Drawing.Color.IndianRed;
+            this.labelUnica.Location = new System.Drawing.Point(230, 197);
+            this.labelUnica.Name = "labelUnica";
+            this.labelUnica.Size = new System.Drawing.Size(290, 25);
+            this.labelUnica.TabIndex = 4;
+            this.labelUnica.Text = "Número de Jogadores: 0/8";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(103, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(553, 73);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "THUNDERSTORM";
+            // 
+            // buttonJogar
+            // 
+            this.buttonJogar.Enabled = false;
+            this.buttonJogar.Location = new System.Drawing.Point(379, 225);
+            this.buttonJogar.Name = "buttonJogar";
+            this.buttonJogar.Size = new System.Drawing.Size(108, 23);
+            this.buttonJogar.TabIndex = 1;
+            this.buttonJogar.Text = "JOGAR";
+            this.buttonJogar.UseVisualStyleBackColor = true;
+            this.buttonJogar.Click += new System.EventHandler(this.buttonJogar_Click);
+            // 
+            // buttonAdicionar
+            // 
+            this.buttonAdicionar.Location = new System.Drawing.Point(265, 225);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(108, 23);
+            this.buttonAdicionar.TabIndex = 0;
+            this.buttonAdicionar.Text = "Adicionar";
+            this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Location = new System.Drawing.Point(596, 268);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(75, 23);
+            this.buttonMenu.TabIndex = 31;
+            this.buttonMenu.Text = "Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // espacoSeta3
             // 
@@ -491,80 +552,16 @@ namespace Conjuracao
             this.progressBar8.Value = 6;
             this.progressBar8.Visible = false;
             // 
-            // groupBoxMenu
-            // 
-            this.groupBoxMenu.Controls.Add(this.labelUnica);
-            this.groupBoxMenu.Controls.Add(this.textBox1);
-            this.groupBoxMenu.Controls.Add(this.buttonJogar);
-            this.groupBoxMenu.Controls.Add(this.buttonAdicionar);
-            this.groupBoxMenu.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxMenu.Name = "groupBoxMenu";
-            this.groupBoxMenu.Size = new System.Drawing.Size(758, 297);
-            this.groupBoxMenu.TabIndex = 11;
-            this.groupBoxMenu.TabStop = false;
-            // 
-            // labelUnica
-            // 
-            this.labelUnica.AutoSize = true;
-            this.labelUnica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUnica.ForeColor = System.Drawing.Color.IndianRed;
-            this.labelUnica.Location = new System.Drawing.Point(230, 197);
-            this.labelUnica.Name = "labelUnica";
-            this.labelUnica.Size = new System.Drawing.Size(290, 25);
-            this.labelUnica.TabIndex = 4;
-            this.labelUnica.Text = "Número de Jogadores: 0/8";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(103, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(553, 73);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "THUNDERSTORM";
-            // 
-            // buttonJogar
-            // 
-            this.buttonJogar.Enabled = false;
-            this.buttonJogar.Location = new System.Drawing.Point(379, 225);
-            this.buttonJogar.Name = "buttonJogar";
-            this.buttonJogar.Size = new System.Drawing.Size(108, 23);
-            this.buttonJogar.TabIndex = 1;
-            this.buttonJogar.Text = "JOGAR";
-            this.buttonJogar.UseVisualStyleBackColor = true;
-            this.buttonJogar.Click += new System.EventHandler(this.buttonJogar_Click);
-            // 
-            // buttonAdicionar
-            // 
-            this.buttonAdicionar.Location = new System.Drawing.Point(265, 225);
-            this.buttonAdicionar.Name = "buttonAdicionar";
-            this.buttonAdicionar.Size = new System.Drawing.Size(108, 23);
-            this.buttonAdicionar.TabIndex = 0;
-            this.buttonAdicionar.Text = "Adicionar";
-            this.buttonAdicionar.UseVisualStyleBackColor = true;
-            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
-            // 
-            // buttonMenu
-            // 
-            this.buttonMenu.Location = new System.Drawing.Point(596, 268);
-            this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(75, 23);
-            this.buttonMenu.TabIndex = 31;
-            this.buttonMenu.Text = "Menu";
-            this.buttonMenu.UseVisualStyleBackColor = true;
-            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
-            // 
             // Thunderstorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(784, 331);
+            this.Controls.Add(this.groupBoxMenu);
             this.Controls.Add(this.groupBoxPartida);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MaximumSize = new System.Drawing.Size(800, 370);
             this.Name = "Thunderstorm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thunderstorm";
@@ -575,6 +572,8 @@ namespace Conjuracao
             ((System.ComponentModel.ISupportInitialize)(this.dado5picbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado6picbox)).EndInit();
             this.groupBoxPartida.ResumeLayout(false);
+            this.groupBoxMenu.ResumeLayout(false);
+            this.groupBoxMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta2)).EndInit();
@@ -583,8 +582,6 @@ namespace Conjuracao
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.espacoSeta5)).EndInit();
-            this.groupBoxMenu.ResumeLayout(false);
-            this.groupBoxMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
