@@ -36,7 +36,6 @@ namespace Conjuracao
             {
                 case 1:
                     ladoDado.Image = Image.FromFile(caminho + "lado1.png");
-                    ladoDado.Image = null;
                     break;
                 case 2:
                     ladoDado.Image = Image.FromFile(caminho + "lado2.png");
